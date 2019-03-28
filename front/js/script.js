@@ -20,7 +20,7 @@ $(document).ready(function(){
 		elementosParseados.forEach(function(elemento, index){
 			agregarElementoALaLista(elemento.imagen, elemento.descripcion, index);
 		});
-		cantidad.textContent = `Cantidad de elementos: ${elementos.length}`;
+		cantidad.textContent = `${JSON.parse(localStorage.getItem('elementos')).length}`;
 });
 
 //Cuando el usuario envía el elemento, sube a la carpeta 'upload' la imagen.
@@ -62,7 +62,7 @@ function agregarElemento(){
 			agregarElementoALaLista(imagen, descripcion, index);
 	}
 	modoEdicion = false;
-	cantidad.textContent = `Cantidad de elementos: ${elementos.length}`;
+	document.getElementById('cantidad').textContent = `${JSON.parse(localStorage.getItem('elementos')).length}`;
 	limpiarInputs();
 }
 
@@ -104,18 +104,8 @@ function reordenarLista(){
 function eliminarElemento(id){
 	let elemento = document.getElementById(id);
 	elemento.parentNode.removeChild(elemento);
-	encontrarElementoPorIndexYEliminarlo(id);
-	localStorage.setItem('elementos', elementos);
-	cantidad.textContent = `Cantidad de elementos: ${elementos.length}`;
-}
-
-function encontrarElementoPorIndexYEliminarlo(index){
-	for(let i = 0; i < elementos.length; i++){
-		if(elementos[i].index == index){
-			elementos.splice(i, 1);
-			return;
-		}
-	}
+	let length = parseInt(JSON.parse(localStorage.getItem('elementos')).length);
+	cantidad.textContent = `${length}`;
 }
 
 function editarElemento(id){
@@ -123,7 +113,7 @@ function editarElemento(id){
 		let img = document.getElementById('img');
 		let descripcion = document.getElementById('vistaDescripcion');
 		descripcion.value = elementos[id].descripcion;
-		document.querySelector('label').id = id;
+		document.querySelector('label').id = id; //Guarda en el DOM una variable para identificar el <li> a modificar.
 		img.src = `back/upload/${elementos[id].imagen}`;
 }
 
