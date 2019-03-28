@@ -1,0 +1,56 @@
+body{
+    background: #acb6e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #acb6e5, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bulletImg{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.btn, img{
+    border: 2px solid black;
+}
+
+textarea{
+    border: 2px solid black;
+}
+
+.container{
+    margin-top: 15vh;
+}
+
+#vistaImagen{
+    height: auto;
+    width: 100%;
+}
+
+#vistaDescripcion{
+    
+}
+
+#lista {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+
+#lista li {
+    background-color: dodgerblue;
+    margin: 0 3px 3px 3px;
+    /* padding: 0.4em; */
+    padding-left: 1.4em;
+    padding-top: 0.25em;
+    font-size: 1.4em;
+    width: 300px;
+    height: 50px;
+    border: 2px solid black
+}
+
+#lista li span {
+    position: absolute;
+    margin-left: -1.3em;
+}

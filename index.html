@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio Telecentro</title>
+        <!--BOOTSTRAP CSS--><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!--JQUERY CSS--><link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!--FONTS AWESOME ICONS--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!--ESTILO LOCAL--><link rel="stylesheet" href="front/css/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="row">
+                <div class="col col-lg-4">
+                    <ul id="lista">
+                        <!-- <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li> -->
+                    </ul>
+                </div>
+                <div class="col col-lg-8">
+                    <form method="POST" action="" enctype="multipart/form-data" id="myform">
+                        <div class="row">
+                            <div class='preview col col-lg-4'>
+                                <img src="https://via.placeholder.com/300" id="img" width="200" height="200">
+                            </div>
+                            <div class='col col-lg-4'>
+                                <label id="" hidden></label>
+                                <textarea id="vistaDescripcion" rows="8" cols="27"></textarea>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 5px">
+                            <input class="btn btn-info" type="file" id="file" name="file" />
+                            <input type="button" class="btn btn-success" value="Upload" id="but_upload">
+                        </div>
+                    </form>
+                    <textarea id="descripcion" name="name" rows="6" cols="63" placeholder="Descripción (max 200 caracteres)" maxlength="200"></textarea><br/>
+                    <button class="btn btn-success" onclick="agregarElemento()">Enviar info</button>
+                    <b><span id="cantidad"></span></b>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script src="front/js/script.js"></script>
+</html>
