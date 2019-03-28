@@ -33,6 +33,4 @@ Solo se necesita pullear el proyecto a la carpeta htdocs, con Apache corriendo e
 ```
 
 # Posible mejoras
--Refactorización.
--Una base de datos que guarde la información manualmente o al cerrar la página.
--Encapsular los elementos en un contenedor con una scrollbar, para encapsularlos.
+Refactorización; una base de datos que guarde la información manualmente o al cerrar la página; encapsular los elementos en un contenedor con una scrollbar, para encapsularlos.
