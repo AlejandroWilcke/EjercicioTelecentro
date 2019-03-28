@@ -22,6 +22,7 @@ El proyecto también se encuentra en linea.
 No se utilizaron dependencias NPM.
 Solo se necesita tener el proyecto en la carpeta htdocs, con Apache corriendo en el puerto 80.
 La carpeta main debe llamarse tal cual (EjercicioTelecentro), debido a que la ruta del localhost nace en el htdocs.
+También, como el guardado de imágenes necesita una carpeta previamente creada, y Github no sube las carpetas vacías, se sube la carpeta upload con una imagen.
 ```
   git init
 ```
@@ -29,8 +30,10 @@ La carpeta main debe llamarse tal cual (EjercicioTelecentro), debido a que la ru
   git pull https://github.com/AlejandroWilcke/EjercicioTelecentro
 ```
 # Ejecución
+*No ingresar con 127.0.0.1, ya que el request post de AJAX está predeterminado desde localhost.
+*Para CORS, 127.0.0.1 es distinto de localhost, y rechaza el request.
 ```
-  Abrir index.html
+  http://localhost/EjercicioTelecentro/
 ```
 
 # Posible mejoras
