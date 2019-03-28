@@ -20,7 +20,7 @@ El proyecto también se encuentra en linea.
 ```
 # Instalación
 No se utilizaron dependencias NPM.
-Solo se necesita pullear el proyecto a la carpeta htdocs, con Apache corriendo en el puerto 80.
+Solo se necesita tener el proyecto en la carpeta htdocs, con Apache corriendo en el puerto 80.
 ```
   git init
 ```
