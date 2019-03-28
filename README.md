@@ -35,4 +35,4 @@ También, como el guardado de imágenes necesita una carpeta previamente creada,
 ```
 
 # Posible mejoras
-Refactorización; una base de datos que guarde la información manualmente o al cerrar la página; encapsular los elementos en un contenedor con una scrollbar, para encapsularlos.
+Refactorización; una base de datos que guarde la información manualmente o al cerrar la página; encapsular los elementos en un contenedor con una scrollbar.
