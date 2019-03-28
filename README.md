@@ -30,8 +30,7 @@ También, como el guardado de imágenes necesita una carpeta previamente creada,
   git pull https://github.com/AlejandroWilcke/EjercicioTelecentro
 ```
 # Ejecución
-*No ingresar con 127.0.0.1, ya que el request post de AJAX está predeterminado desde localhost.
-*Para CORS, 127.0.0.1 es distinto de localhost, y rechaza el request.
+*No ingresar con 127.0.0.1, ya que el request post de AJAX está predeterminado desde localhost. Para CORS, 127.0.0.1 es distinto de localhost, y rechaza el request.
 ```
   http://localhost/EjercicioTelecentro/
 ```
