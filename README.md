@@ -21,6 +21,7 @@ El proyecto también se encuentra en linea.
 # Instalación
 No se utilizaron dependencias NPM.
 Solo se necesita tener el proyecto en la carpeta htdocs, con Apache corriendo en el puerto 80.
+La carpeta main debe llamarse tal cual (EjercicioTelecentro), debido a que la ruta del localhost nace en el htdocs.
 ```
   git init
 ```
