@@ -1,6 +1,6 @@
 # EjercicioTelecentro
 (Una prueba sin frameworks)
-Los elementos son guardados en el localStorage, el back solo es responsable de la carga de imágenes.
+Los elementos son guardados en el localStorage, el back solo es responsable del guardado de imágenes.
 El proyecto también se encuentra en linea.
 
 # Archivos
