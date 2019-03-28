@@ -1,10 +1,3 @@
-//Span que indica la cantidad de elementos de la lista.
-var cantidad = document.getElementById('cantidad');
-
-//Como la interfaz de editar/subir se comparte, la misma tiene un comportamiento que se adecúa
-//acorde a este booleano.
-var modoEdicion = false;
-
 //Este array se utilizará para guardar objetos que tienen:
 	//1: un nombre de archivo de imagen = "nombre_de_archivo.jpg"
 	//2: una descripción = max 200 caracteres.
@@ -12,6 +5,13 @@ var modoEdicion = false;
 //Se guardará en el localStorage para su persistencia en la ventana.
 //Para una persistencia real, utilizaría una base de datos.
 var elementos = [];
+
+//Span que indica la cantidad de elementos de la lista.
+var cantidad = document.getElementById('cantidad');
+
+//Como la interfaz de editar/subir se comparte, la misma tiene un comportamiento que se adecúa
+//acorde a este booleano.
+var modoEdicion = false;
 
 //Cada vez que se refresca la página, llena la <ul> existente de <li>, por cada elemento encontrado en la DB.
 $(document).ready(function(){
@@ -23,8 +23,7 @@ $(document).ready(function(){
 		cantidad.textContent = `Cantidad de elementos: ${elementos.length}`;
 });
 
-//Cuando el usuario envía el elemento, sube a la carpeta 'upload' la imagen,
-//y guarda el nombre de la imagen con su extensión, y la descripción en la DB.
+//Cuando el usuario envía el elemento, sube a la carpeta 'upload' la imagen.
 $(document).ready(function(){
 	$("#but_upload").click(function(){
 		let fd = new FormData();
@@ -51,7 +50,6 @@ $(document).ready(function(){
 
 function agregarElemento(){
 	var imagen, descripcion, index;
-
 	if(modoEdicion){
 			imagen = document.getElementById('file').files[0].name;
 			descripcion = document.getElementById('vistaDescripcion').value;
@@ -63,7 +61,6 @@ function agregarElemento(){
 			index = elementos.length;
 			agregarElementoALaLista(imagen, descripcion, index);
 	}
-
 	modoEdicion = false;
 	cantidad.textContent = `Cantidad de elementos: ${elementos.length}`;
 	limpiarInputs();
@@ -78,13 +75,12 @@ function modificarElementoDeLaLista(imagen, descripcion, index){
 }
 
 //Esto que hice está pésimo, es muy mala práctica y lo sé. Explico mi problema.
-//Los <li>(elementos) tienen un evento que ocurre al reordenarse 'onmouseup="actualizarOrdenDeLista()"'.
+//Los <li>(elementos) tienen un evento que ocurre al reordenarse = 'onmouseup="actualizarOrdenDeLista()"'.
 //Esa función devuelve una colección de <li> del DOM.
 //El problema es que este evento se dispara antes que el resultado del nuevo orden de elementos,
 //realizado con la función '.sortable' de jQuery, y por lo tanto el orden que devuelve no muestra cambios.
 //Estos cambios sí son efectuados, pero como ocurren luego del evento, necesito pasar por encima de su sincronía.
 //Por eso el timeout.
-
 function actualizarOrdenDeLista(){
 	setTimeout(reordenarLista, 20);
 }
